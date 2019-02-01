@@ -31,6 +31,8 @@
 					<div class="card-body">
 
 						<form action="<?php base_url('admin/customer/add') ?>" method="post" enctype="multipart/form-data" >
+							
+
 							<div class="form-group">
 								<label for="name">Name*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
@@ -42,8 +44,8 @@
 
 							<div class="form-group">
 								<label for="price">Address*</label>
-								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Customer address" />
+								<input class="form-control <?php echo form_error('addres') ? 'is-invalid':'' ?>"
+								 type="text" name="addres" placeholder="Customer address" />
 								<div class="invalid-feedback">
 									<?php echo form_error('addres') ?>
 								</div>

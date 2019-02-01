@@ -43,7 +43,7 @@ class Customer_model extends CI_Model
     public function update()
     {
         $post = $this->input->post();
-        $this->customer_id = uniqid();
+        $this->customer_id =  $post['id'];
         $this->name = $post["name"];
         $this->addres = $post["addres"];
         $this->db->update($this->_table, $this, array('customer_id' => $post['id']));

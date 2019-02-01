@@ -33,10 +33,12 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url(" admin/customer/edit") ?>" method="post"
+						<form action="<?php base_url("admin/customer/edit") ?>" method="post"
 							enctype="multipart/form-data" >
 
 							<input type="hidden" name="id" value="<?php echo $customer->customer_id?>" />
+
+							
 
 							<div class="form-group">
 								<label for="name">Name*</label>
@@ -48,9 +50,9 @@
 							</div>
 
 							<div class="form-group">
-								<label for="price">Price</label>
-								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Customer address" value="<?php echo $customer->addres ?>" />
+								<label for="price">Address*</label>
+								<input class="form-control <?php echo form_error('addres') ? 'is-invalid':'' ?>"
+								 type="text" name="addres" placeholder="Customer address" value="<?php echo $customer->addres ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('addres') ?>
 								</div>
